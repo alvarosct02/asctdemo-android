@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/screenAFragment">
+
+    <fragment
+        android:id="@+id/screenAFragment"
+        android:name="com.github.alvarosct02.deeplink.ScreenAFragment"
+        android:label="Screen A Fragment"
+        tools:layout="@layout/fragment_base_with_buttons">
+        <action
+            android:id="@+id/action_screenAFragment_to_screenBFragment"
+            app:destination="@id/screenBFragment" />
+        <action
+            android:id="@+id/action_screenAFragment_to_screenB2Fragment"
+            app:destination="@id/screenB2Fragment" />
+        <deepLink app:uri="asct://screen_a" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/screenBFragment"
+        android:name="com.github.alvarosct02.deeplink.ScreenBFragment"
+        android:label="Screen B Fragment"
+        tools:layout="@layout/fragment_base_with_buttons">
+        <action
+            android:id="@+id/action_screenBFragment_to_screenCFragment"
+            app:destination="@id/screenCFragment" />
+        <deepLink app:uri="asct://screen_b" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/screenCFragment"
+        android:name="com.github.alvarosct02.deeplink.ScreenCFragment"
+        android:label="Screen C Fragment"
+        tools:layout="@layout/fragment_base_with_buttons" >
+        <deepLink app:uri="asct://screen_c" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/screenDFragment"
+        android:name="com.github.alvarosct02.deeplink.ScreenDFragment"
+        android:label="Screen D Fragment"
+        tools:layout="@layout/fragment_base_with_buttons" >
+        <deepLink app:uri="asct://screen_d" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/screenB2Fragment"
+        android:name="com.github.alvarosct02.deeplink.ScreenB2Fragment"
+        android:label="ScreenB 2 Fragment"
+        tools:layout="@layout/fragment_base_with_buttons">
+        <action
+            android:id="@+id/action_screenB2Fragment_to_screenCFragment"
+            app:destination="@id/screenCFragment" />
+        <action
+            android:id="@+id/action_screenB2Fragment_to_screenB2CFragment"
+            app:destination="@id/screenB2CFragment" />
+        <deepLink app:uri="asct://screen_b2" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/screenB2CFragment"
+        android:name="com.github.alvarosct02.deeplink.ScreenB2CFragment"
+        android:label="ScreenB2 C Fragment"
+        tools:layout="@layout/fragment_base_with_buttons" >
+        <deepLink app:uri="asct://screen_b2c" />
+    </fragment>
+
+    <action
+        android:id="@+id/action_to_screenDFragment"
+        app:destination="@id/screenDFragment" />
+
+</navigation>

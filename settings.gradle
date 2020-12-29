@@ -1,0 +1,4 @@
+include ':app'
+include ':deeplink'
+include ':navigation'
+rootProject.name = "ASCT Demo"

@@ -1,0 +1,11 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <style name="OpenSansTextViewStyle" parent="android:Widget.TextView">
+        <item name="android:fontFamily">@font/open_sans</item>
+    </style>
+
+    <style name="OpenSansButtonStyle" parent="android:Widget.Holo.Button">
+        <item name="android:fontFamily">@font/open_sans</item>
+    </style>
+
+</resources>
